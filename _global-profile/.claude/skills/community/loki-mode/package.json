@@ -1,0 +1,50 @@
+{
+  "name": "loki-mode",
+  "version": "5.11.0",
+  "description": "Multi-agent autonomous startup system for Claude Code, Codex CLI, and Gemini CLI",
+  "keywords": [
+    "claude",
+    "claude-code",
+    "ai",
+    "agent",
+    "autonomous",
+    "startup",
+    "multi-agent"
+  ],
+  "homepage": "https://asklokesh.github.io/loki-mode",
+  "bugs": {
+    "url": "https://github.com/asklokesh/loki-mode/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asklokesh/loki-mode.git"
+  },
+  "license": "MIT",
+  "author": "Lokesh",
+  "bin": {
+    "loki": "autonomy/loki",
+    "loki-mode": "bin/loki-mode.js"
+  },
+  "files": [
+    "SKILL.md",
+    "VERSION",
+    "autonomy/",
+    "providers/",
+    "skills/",
+    "references/",
+    "docs/",
+    "bin/",
+    "api/"
+  ],
+  "scripts": {
+    "postinstall": "node bin/postinstall.js",
+    "test": "echo \"Tests run via autonomy/run.sh\""
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "os": [
+    "darwin",
+    "linux"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(for f in \"c:\\\\_Repositorio\\\\antigravity-workspace\\\\.codex\\\\agents\"/*.md)",
+      "Bash(do cp \"$f\" \"c:\\\\_Repositorio\\\\antigravity-workspace\\\\_template\\\\workspace\\\\.codex\\\\agents/\")",
+      "Bash(done)"
+    ]
+  }
+}

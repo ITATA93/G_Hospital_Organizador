@@ -1,0 +1,121 @@
+{
+  "$schema": "./catalog-schema.json",
+  "version": "1.0",
+  "description": "Central library of agents and skills for Antigravity multi-vendor system",
+  "last_updated": "2026-02-02",
+  "agents": [
+    {
+      "name": "code-analyst",
+      "file": "agents/code-analyst.md",
+      "description": "Analyze code and architecture. Read-only.",
+      "default_vendor": "gemini",
+      "supported_vendors": ["gemini", "claude", "codex"],
+      "category": "analysis",
+      "triggers": ["analyze", "explain", "architecture"],
+      "active_by_default": true
+    },
+    {
+      "name": "code-reviewer",
+      "file": "agents/code-reviewer.md",
+      "description": "Review code for bugs and security issues.",
+      "default_vendor": "claude",
+      "supported_vendors": ["gemini", "claude", "codex"],
+      "category": "review",
+      "triggers": ["review", "audit", "security"],
+      "active_by_default": true
+    },
+    {
+      "name": "db-analyst",
+      "file": "agents/db-analyst.md",
+      "description": "Database analysis, queries, migrations.",
+      "default_vendor": "claude",
+      "supported_vendors": ["gemini", "claude", "codex"],
+      "category": "database",
+      "triggers": ["database", "SQL", "query", "migration"],
+      "active_by_default": true
+    },
+    {
+      "name": "deployer",
+      "file": "agents/deployer.md",
+      "description": "CI/CD, Docker, Kubernetes configuration.",
+      "default_vendor": "gemini",
+      "supported_vendors": ["gemini", "claude", "codex"],
+      "category": "devops",
+      "triggers": ["deploy", "docker", "CI/CD", "kubernetes"],
+      "active_by_default": true
+    },
+    {
+      "name": "doc-writer",
+      "file": "agents/doc-writer.md",
+      "description": "Documentation maintenance and updates.",
+      "default_vendor": "gemini",
+      "supported_vendors": ["gemini", "claude", "codex"],
+      "category": "documentation",
+      "triggers": ["document", "README", "CHANGELOG"],
+      "active_by_default": true
+    },
+    {
+      "name": "test-writer",
+      "file": "agents/test-writer.md",
+      "description": "Test generation and coverage.",
+      "default_vendor": "gemini",
+      "supported_vendors": ["gemini", "claude", "codex"],
+      "category": "testing",
+      "triggers": ["test", "coverage", "pytest", "jest"],
+      "active_by_default": true
+    },
+    {
+      "name": "researcher",
+      "file": "agents/researcher.md",
+      "description": "Deep research with citations. Saves to docs/research/.",
+      "default_vendor": "codex",
+      "supported_vendors": ["gemini", "claude", "codex"],
+      "category": "research",
+      "triggers": ["research", "investigate", "documentation", "best practices"],
+      "active_by_default": true,
+      "special_features": ["deep_research", "citations", "saves_to_disk"]
+    }
+  ],
+  "skills": [
+    {
+      "name": "skill-creator",
+      "file": "skills/skill-creator.md",
+      "description": "Create new Codex skills with proper structure.",
+      "vendor": "codex",
+      "category": "meta",
+      "active_by_default": true
+    },
+    {
+      "name": "skill-installer",
+      "file": "skills/skill-installer.md",
+      "description": "Install skills from GitHub, URLs, or local files.",
+      "vendor": "codex",
+      "category": "meta",
+      "active_by_default": true
+    }
+  ],
+  "categories": {
+    "analysis": "Code analysis and architecture review",
+    "review": "Code review and auditing",
+    "database": "Database operations and optimization",
+    "devops": "CI/CD and deployment",
+    "documentation": "Documentation maintenance",
+    "testing": "Test generation and coverage",
+    "research": "Deep research and documentation discovery",
+    "meta": "Tools for managing agents and skills"
+  },
+  "vendor_paths": {
+    "gemini": {
+      "agents": "~/.gemini/agents/",
+      "skills": "~/.gemini/skills/"
+    },
+    "claude": {
+      "agents": "~/.claude/agents/",
+      "skills": "~/.claude/skills/"
+    },
+    "codex": {
+      "agents": "~/.codex/agents/",
+      "skills": "~/.codex/skills/"
+    }
+  }
+}
