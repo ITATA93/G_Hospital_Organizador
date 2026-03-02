@@ -1,0 +1,480 @@
+# =============================================================================
+# folder_structure.yaml
+# Estructura de carpetas del Sistema SAIA
+# Hospital Provincial del Limari - Ovalle, Chile
+#
+# Define la jerarquia de carpetas para la organizacion documental
+# por Unidad Hospitalaria, Ano y Tipo de Documento.
+#
+# Uso: src/organizer.py lee esta configuracion para crear la estructura
+# de archivado automatizado.
+# =============================================================================
+
+version: "1.0.0"
+institucion: "Hospital Provincial del Limari"
+ciudad: "Ovalle"
+region: "Region de Coquimbo"
+sistema: "SAIA - Sistema de Apoyo Integral de Archivos"
+
+# ---------------------------------------------------------------------------
+# Unidades Hospitalarias (Estructura Nivel 1)
+# ---------------------------------------------------------------------------
+# Cada unidad genera y recibe documentos administrativos que deben
+# archivarse de forma independiente.
+
+unidades:
+  # --- Unidades Clinicas Asistenciales ---
+  Urgencia:
+    codigo: "URG"
+    descripcion: "Servicio de Urgencia Hospitalaria"
+    responsable: "Jefe de Urgencia"
+    subcarpetas:
+      - Protocolos
+      - Manuales
+      - Normas
+      - Actas
+      - Informes
+      - Memorandums
+      - Ordinarios
+      - Circulares
+      - Planillas
+      - Varios
+    palabras_clave:
+      - urgencia
+      - emergencia
+      - triage
+
+  Pabellon:
+    codigo: "PAB"
+    descripcion: "Pabellon Quirurgico y Recuperacion"
+    responsable: "Enfermera Supervisora Pabellon"
+    subcarpetas:
+      - Protocolos
+      - Manuales
+      - Normas
+      - Actas
+      - Informes
+      - Memorandums
+      - Planillas
+      - Varios
+    palabras_clave:
+      - pabellon
+      - quirofano
+      - cirugia mayor
+      - anestesia
+
+  UCI:
+    codigo: "UCI"
+    descripcion: "Unidad de Cuidados Intensivos"
+    responsable: "Medico Jefe UCI"
+    subcarpetas:
+      - Protocolos
+      - Manuales
+      - Normas
+      - Actas
+      - Informes
+      - Memorandums
+      - Planillas
+      - Varios
+    palabras_clave:
+      - uci
+      - cuidados intensivos
+      - uti
+      - critico
+
+  Medicina:
+    codigo: "MED"
+    descripcion: "Servicio de Medicina Interna"
+    responsable: "Jefe Servicio Medicina"
+    subcarpetas:
+      - Protocolos
+      - Manuales
+      - Normas
+      - Actas
+      - Informes
+      - Memorandums
+      - Planillas
+      - Varios
+    palabras_clave:
+      - medicina
+      - medicina interna
+      - hospitalizacion
+
+  Cirugia:
+    codigo: "CIR"
+    descripcion: "Servicio de Cirugia General y Especialidades"
+    responsable: "Jefe Servicio Cirugia"
+    subcarpetas:
+      - Protocolos
+      - Manuales
+      - Normas
+      - Actas
+      - Informes
+      - Memorandums
+      - Planillas
+      - Varios
+    palabras_clave:
+      - cirugia
+      - quirurgico
+      - traumatologia
+      - ortopedia
+
+  Pediatria:
+    codigo: "PED"
+    descripcion: "Servicio de Pediatria y Neonatologia"
+    responsable: "Jefe Servicio Pediatria"
+    subcarpetas:
+      - Protocolos
+      - Manuales
+      - Normas
+      - Actas
+      - Informes
+      - Memorandums
+      - Planillas
+      - Varios
+    palabras_clave:
+      - pediatria
+      - neonatologia
+      - recien nacido
+      - infantil
+
+  Maternidad:
+    codigo: "MAT"
+    descripcion: "Servicio de Maternidad, Obstetricia y Ginecologia"
+    responsable: "Matrona Jefe"
+    subcarpetas:
+      - Protocolos
+      - Manuales
+      - Normas
+      - Actas
+      - Informes
+      - Memorandums
+      - Planillas
+      - Varios
+    palabras_clave:
+      - maternidad
+      - obstetricia
+      - ginecologia
+      - prenatal
+      - parto
+
+  # --- Unidades de Apoyo Diagnostico ---
+  Imagenologia:
+    codigo: "IMG"
+    descripcion: "Unidad de Imagenologia (Radiologia, Ecografia, TAC)"
+    responsable: "Tecnologo Medico Jefe"
+    subcarpetas:
+      - Protocolos
+      - Manuales
+      - Normas
+      - Actas
+      - Informes
+      - Memorandums
+      - Planillas
+      - Varios
+    palabras_clave:
+      - imagenologia
+      - radiologia
+      - ecografia
+      - tomografia
+      - ris
+      - pacs
+      - rayos
+
+  Laboratorio:
+    codigo: "LAB"
+    descripcion: "Laboratorio Clinico y Banco de Sangre"
+    responsable: "Tecnologo Medico Jefe Laboratorio"
+    subcarpetas:
+      - Protocolos
+      - Manuales
+      - Normas
+      - Actas
+      - Informes
+      - Memorandums
+      - Planillas
+      - Varios
+    palabras_clave:
+      - laboratorio
+      - lis
+      - banco de sangre
+      - hemograma
+      - bioquimica
+
+  Farmacia:
+    codigo: "FAR"
+    descripcion: "Servicio de Farmacia Hospitalaria"
+    responsable: "Quimico Farmaceutico Jefe"
+    subcarpetas:
+      - Protocolos
+      - Manuales
+      - Normas
+      - Actas
+      - Informes
+      - Memorandums
+      - Planillas
+      - Varios
+    palabras_clave:
+      - farmacia
+      - medicamento
+      - dispensacion
+      - arsenal
+
+  # --- Unidades Administrativas y de Gestion ---
+  Direccion:
+    codigo: "DIR"
+    descripcion: "Direccion del Establecimiento y Subdireccion"
+    responsable: "Director del Hospital"
+    subcarpetas:
+      - Protocolos
+      - Manuales
+      - Normas
+      - Actas
+      - Informes
+      - Memorandums
+      - Ordinarios
+      - Resoluciones
+      - Circulares
+      - Contratos
+      - Planillas
+      - Presentaciones
+      - Varios
+    palabras_clave:
+      - direccion
+      - subdireccion
+      - director
+      - gestion
+
+  Calidad:
+    codigo: "CAL"
+    descripcion: "Unidad de Calidad, Seguridad del Paciente e IAAS"
+    responsable: "Encargado de Calidad"
+    subcarpetas:
+      - Protocolos
+      - Manuales
+      - Normas
+      - Actas
+      - Informes
+      - Memorandums
+      - Planillas
+      - Varios
+    palabras_clave:
+      - calidad
+      - acreditacion
+      - iaas
+      - infecciones asociadas
+      - seguridad paciente
+      - eventos adversos
+
+  RRHH:
+    codigo: "RRH"
+    descripcion: "Unidad de Recursos Humanos y Desarrollo de Personas"
+    responsable: "Jefe RRHH"
+    subcarpetas:
+      - Contratos
+      - Normas
+      - Actas
+      - Informes
+      - Memorandums
+      - Resoluciones
+      - Planillas
+      - Varios
+    palabras_clave:
+      - recursos humanos
+      - rrhh
+      - personal
+      - dotacion
+      - capacitacion
+      - seleccion
+
+  Abastecimiento:
+    codigo: "ABA"
+    descripcion: "Unidad de Abastecimiento y Bodega Central"
+    responsable: "Jefe de Abastecimiento"
+    subcarpetas:
+      - Facturas
+      - Contratos
+      - Normas
+      - Actas
+      - Informes
+      - Memorandums
+      - Ordinarios
+      - Planillas
+      - Varios
+    palabras_clave:
+      - abastecimiento
+      - bodega
+      - compra
+      - adquisicion
+      - licitacion
+      - proveedor
+
+# ---------------------------------------------------------------------------
+# Tipos de Documentos (Estructura Nivel 3 dentro de cada Unidad)
+# ---------------------------------------------------------------------------
+
+tipos_documento:
+  Protocolos:
+    descripcion: "Protocolos clinicos y administrativos"
+    extensiones_comunes: [".pdf", ".docx"]
+    patrones:
+      - "protocolo"
+      - "prot[._-]"
+
+  Manuales:
+    descripcion: "Manuales de procedimiento e instructivos"
+    extensiones_comunes: [".pdf", ".docx"]
+    patrones:
+      - "manual"
+      - "instructivo"
+      - "procedimiento"
+
+  Normas:
+    descripcion: "Normativa, reglamentos y regulaciones"
+    extensiones_comunes: [".pdf", ".docx"]
+    patrones:
+      - "norma"
+      - "reglamento"
+      - "decreto"
+
+  Actas:
+    descripcion: "Actas de reunion y minutas"
+    extensiones_comunes: [".pdf", ".docx", ".xlsx"]
+    patrones:
+      - "acta"
+      - "minuta"
+      - "reunion"
+
+  Informes:
+    descripcion: "Informes tecnicos, de gestion y evaluaciones"
+    extensiones_comunes: [".pdf", ".docx", ".xlsx"]
+    patrones:
+      - "informe"
+      - "reporte"
+      - "analisis"
+
+  Memorandums:
+    descripcion: "Comunicaciones internas oficiales"
+    extensiones_comunes: [".pdf", ".docx"]
+    patrones:
+      - "memo"
+      - "memorandum"
+
+  Ordinarios:
+    descripcion: "Comunicaciones externas oficiales"
+    extensiones_comunes: [".pdf", ".docx"]
+    patrones:
+      - "ordinario"
+      - "oficio"
+
+  Resoluciones:
+    descripcion: "Actos administrativos resolutivos"
+    extensiones_comunes: [".pdf"]
+    patrones:
+      - "resolucion"
+      - "rex"
+      - "decreto"
+
+  Circulares:
+    descripcion: "Instrucciones generales y comunicados"
+    extensiones_comunes: [".pdf", ".docx"]
+    patrones:
+      - "circular"
+      - "comunicado"
+
+  Contratos:
+    descripcion: "Contratos, convenios y licitaciones"
+    extensiones_comunes: [".pdf", ".docx"]
+    patrones:
+      - "contrato"
+      - "convenio"
+      - "licitacion"
+
+  Facturas:
+    descripcion: "Documentos tributarios (facturas, boletas, OC)"
+    extensiones_comunes: [".pdf", ".xlsx"]
+    patrones:
+      - "factura"
+      - "boleta"
+      - "orden compra"
+
+  Planillas:
+    descripcion: "Planillas, registros y bases de datos tabulares"
+    extensiones_comunes: [".xlsx", ".xls", ".csv"]
+    patrones:
+      - "planilla"
+      - "registro"
+
+  Presentaciones:
+    descripcion: "Presentaciones y material de capacitacion"
+    extensiones_comunes: [".pptx", ".ppt", ".pdf"]
+    patrones:
+      - "presentacion"
+      - "capacitacion"
+
+  Varios:
+    descripcion: "Documentos no clasificados automaticamente"
+    extensiones_comunes: ["*"]
+    patrones: []
+
+# ---------------------------------------------------------------------------
+# Estructura de Directorios SAIA
+# ---------------------------------------------------------------------------
+# Patron: {raiz_saia}/{unidad}/{anio}/{tipo_documento}/{archivo}
+#
+# Ejemplo:
+#   _Estructura_Final_SAIA/
+#     Urgencia/
+#       2026/
+#         Protocolos/
+#           protocolo_triage_2026.pdf
+#         Informes/
+#           informe_gestion_enero_2026.xlsx
+#     Direccion/
+#       2026/
+#         Resoluciones/
+#           rex_001_2026.pdf
+#         Memorandums/
+#           memo_presupuesto_2026.docx
+
+estructura:
+  raiz: "_Estructura_Final_SAIA"
+  patron: "{unidad}/{anio}/{tipo_documento}"
+  anio_actual: 2026
+  anios_retroactivos: 5  # Organizar documentos desde 2021
+
+# ---------------------------------------------------------------------------
+# Reglas de Retencion Documental
+# ---------------------------------------------------------------------------
+# Basado en normativa chilena (Ley 20.285 Transparencia, Ley 19.628 Datos)
+
+retencion:
+  Protocolos:
+    periodo_anos: 10
+    obligatorio: true
+    nota: "Mantener mientras el protocolo este vigente + 5 anos"
+  Resoluciones:
+    periodo_anos: 10
+    obligatorio: true
+    nota: "Archivo permanente del Servicio de Salud"
+  Contratos:
+    periodo_anos: 6
+    obligatorio: true
+    nota: "Segun Ley 19.886 de Compras Publicas"
+  Facturas:
+    periodo_anos: 6
+    obligatorio: true
+    nota: "SII requiere 6 anos de respaldo tributario"
+  Informes:
+    periodo_anos: 5
+    obligatorio: false
+  Memorandums:
+    periodo_anos: 3
+    obligatorio: false
+  Actas:
+    periodo_anos: 5
+    obligatorio: true
+    nota: "Comites de calidad y seguridad requieren respaldo"
+  Varios:
+    periodo_anos: 2
+    obligatorio: false

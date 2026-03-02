@@ -1,26 +1,33 @@
-# TODO — AG_Hospital_Organizador (SAIA)
+# TODO — G_Hospital_Organizador (SAIA)
 
 > Prioritized task list. Update regularly.
 
 ## High Priority
 
-- [ ] Implement File Organizer Logic (Python/Pandas) <!-- id: hospital-1 -->
-- [ ] Define "Unidades Hospitalarias" folder structure <!-- id: hospital-2 -->
-- [ ] **Popular Knowledge Vault**: Migrar documentos existentes a `docs/knowledge_vault/` <!-- id: doc-1 -->
-    - [ ] Estructurar Protocolos de Urgencias <!-- id: doc-2 -->
-    - [ ] Documentar Arquitectura HIS <!-- id: doc-3 -->
+(No pending high-priority items)
 
 ## Medium Priority
 
-- [ ] Configure MCP servers for external integrations
-- [ ] Set up CI/CD pipeline (GitHub Actions)
+- [ ] Add more community skills as needed
+- [ ] Implement real-time folder monitoring with watchdog
+- [ ] Add OCR pipeline for scanned PDF classification
+- [ ] Create dashboard de metricas de organizacion documental
 
 ## Low Priority
 
-- [ ] Add more community skills as needed
+- [ ] Add openpyxl metadata extraction for Excel files
+- [ ] Implement rollback feature in MigrationEngine
+- [ ] Add support for .msg (Outlook) email classification
 
 ## Completed
 
+- [x] Implement File Organizer Logic (Python/Pandas) (2026-03-01: `src/organizer.py`) <!-- id: hospital-1 -->
+- [x] Define "Unidades Hospitalarias" folder structure (2026-03-01: `config/folder_structure.yaml`) <!-- id: hospital-2 -->
+- [x] **Popular Knowledge Vault**: Migrar documentos a `docs/knowledge_vault/` (2026-03-01) <!-- id: doc-1 -->
+  - [x] Estructurar Protocolos de Urgencias (2026-03-01: `docs/protocolos_urgencias.md`) <!-- id: doc-2 -->
+  - [x] Documentar Arquitectura HIS (2026-03-01: `docs/arquitectura_his.md`) <!-- id: doc-3 -->
+- [x] Configure MCP servers for external integrations (2026-03-01: `.claude/mcp.json` verified)
+- [x] Set up CI/CD pipeline (GitHub Actions) (2026-03-01: `.github/workflows/ci.yml` enhanced)
 - [x] Add project-specific skills to .gemini/skills/ (2026-02-18: `hospital-document-classifier.md`)
 - [x] Create custom workflows for common tasks (2026-02-18: `turbo-ops.md` + `autonomous_maintenance.md`)
 - [x] Add official Anthropic skills (Claude skills present in `.claude/skills/official/`)
@@ -42,4 +49,4 @@
 
 ---
 
-*Last updated: 2026-02-18*
+Last updated: 2026-03-01
